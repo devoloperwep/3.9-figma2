@@ -1,0 +1,23 @@
+.sitenav {
+  &__sm {
+    display: none;
+    @include respond(sm) {
+      display: block;
+    }
+  }
+  &__list {
+    @include respond(sm) {
+      display: none;
+    }
+    @include flex($gap: 4rem);
+  }
+  &__link {
+    color: $color-gray;
+    font-size: $font-sm;
+    line-height: 1.733;
+    transition: 0.3s;
+    &:hover {
+      color: #f15d51;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.hero {
+  margin-bottom: 7.1rem;
+  @include respond(sm) {
+    margin-bottom: 6.4rem;
+  }
+  &__list {
+    width: 100%;
+    display: grid;
+    gap: 2.8rem 3rem;
+    grid-template-areas:
+      "a a b"
+      "c d b";
+    @include respond(xl) {
+      gap: 1rem 0;
+      grid-template-areas:
+        "a a"
+        "c b"
+        "d b";
+    }
+    @include respond(sm) {
+      grid-template-areas:
+        "a"
+        "c"
+        "d"
+        "b"
+        "b";
+    }
+  }
+  &__item {
+    width: 100%;
+    max-width: 350px;
+    @include respond(sm) {
+      width: auto;
+    }
+    &-img {
+      @include respond(sm) {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 2.4rem;
+      }
+    }
+    &-title1 {
+      font-size: $font-xl;
+      line-height: 1;
+      font-weight: 800;
+      vertical-align: middle;
+      @include respond(sm) {
+        margin-bottom: 1.4rem;
+      }
+    }
+    &-description1 {
+      font-size: $font-sm;
+      line-height: 1.733;
+      color: $color-gray;
+      margin-bottom: 2.9rem;
+    }
+    &-btn {
+      padding: 1.9rem 3.8rem 1.75rem 3.8rem;
+      color: $color-white;
+      letter-spacing: 4.38px;
+      background-color: #f15d51;
+      transition: 0.3s;
+      &:hover {
+        background-color: $color-dark;
+      }
+      @include respond(sm) {
+        margin-bottom: 6.4rem;
+      }
+    }
+    &-title2 {
+      color: #e9aa52;
+      font-size: $font-lg;
+      line-height: 1;
+      margin-bottom: 3.4rem;
+    }
+    &-subtitle {
+      color: $color-white;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+    &-description2 {
+      color: $color-silver;
+      font-size: $font-sm;
+      line-height: 1.7777;
+      padding-bottom: 2.9rem;
+      border-bottom: 1px solid $color-silver;
+      margin-bottom: 3.1rem;
+    }
+    &-description2:last-child {
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+  .item1 {
+    grid-area: a;
+  }
+  .item2 {
+    grid-area: c;
+  }
+  .item3 {
+    grid-area: d;
+  }
+  .item4 {
+    grid-area: b;
+    padding: 3.2rem 2.4rem 0 3.2rem;
+    background-color: $color-dark;
+  }
+}
